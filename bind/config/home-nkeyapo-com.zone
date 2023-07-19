@@ -1,0 +1,31 @@
+$TTL 2d
+
+$ORIGIN home.nkeyapo.com.
+
+@             IN     SOA    ns1.home.nkeyapo.com. info.nkeyapo.com (
+                            2023071700     ; serial
+                            12h            ; refresh
+                            15m            ; retry
+                            3w             ; expire
+                            2h )           ; minimum TTL
+
+              IN     NS     ns1.home.nkeyapo.com.
+
+ns1            IN     A      192.168.10.100
+
+; -- DMZ Servers
+db-srv          IN     A      192.168.10.101
+k8smaster       IN     A      192.168.10.102
+k8snode1        IN     A      192.168.10.103
+k8snode2        IN     A      192.168.10.104
+k8snode3        IN     A      192.168.10.105
+devops          IN     A      192.168.10.106
+data-srv        IN     A      192.168.10.107
+
+; -- LAB Servers
+attecoube-srv           IN     A      192.168.20.3
+switch6248              IN     A      192.168.20.2
+pfsense                 IN     A      192.168.20.1
+datasonghai-laptop      IN     A      192.168.20.99
+yankees-laptop          IN     A      192.168.20.98
+
